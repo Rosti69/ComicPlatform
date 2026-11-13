@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ComicPlatform.Data/ComicPlatform.Data.csproj" />
+  <Project Path="ComicPlatform.Web/ComicPlatform.Web.csproj" />
+</Solution>
