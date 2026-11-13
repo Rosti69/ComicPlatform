@@ -1,1 +1,2 @@
 # ComicPlatform
+Digital Comics Platform
