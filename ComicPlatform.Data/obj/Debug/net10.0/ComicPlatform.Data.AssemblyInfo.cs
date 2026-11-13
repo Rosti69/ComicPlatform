@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ComicPlatform.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e88a84b4afd3119c4bb0c42eef0bf4c5a6bd8ed2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+347022072a7bdfa9a429e93a18269804e713a685")]
 [assembly: System.Reflection.AssemblyProductAttribute("ComicPlatform.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ComicPlatform.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,29 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace ComicPlatform.Data;
+
+public static class RoleSeeder
+{
+    public static async Task SeedRolesAsync(IServiceProvider serviceProvider)
+    {
+        using var scope = serviceProvider.CreateScope();
+        var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+        string[] roles = ["Reader", "Author", "Administrator"];
+
+        foreach (var role in roles)
+        {
+            if (!await roleManager.RoleExistsAsync(role))
+            {
+                var result = await roleManager.CreateAsync(new IdentityRole(role));
+
+                if (!result.Succeeded)
+                {
+                    var errors = string.Join("; ", result.Errors.Select(error => error.Description));
+                    throw new InvalidOperationException($"Failed to create role {role}: {errors}");
+                }
+            }
+        }
+    }
+}
